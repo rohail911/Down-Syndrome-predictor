@@ -1,28 +1,24 @@
-Sure! Here's a professional and well-structured `README.md` for your GitHub project:
 
----
 
-# 🧬 Down Syndrome Risk Prediction Tool
+ Down Syndrome Risk Prediction Tool
 
 This project leverages machine learning, Bayesian statistics, and real-world risk factors to predict the likelihood of Down Syndrome (DS) in newborns. It integrates logistic regression, neural networks (MLP), and Bayesian probability based on maternal/paternal age, carrier status, karyotype abnormalities, and SNP test results.
 
----
+ Features
 
-## 📌 Features
-
-* 🔍 **Preprocessing:** Cleans and standardizes input data.
-* 📊 **Bayesian Estimation:** Computes DS risk using likelihood ratios and prior probabilities.
-* 🤖 **ML Models:** Trains:
+* Preprocessing: Cleans and standardizes input data.
+* Bayesian Estimation: Computes DS risk using likelihood ratios and prior probabilities.
+*  ML Models: Trains:
 
   * Logistic Regression (with class balancing)
   * Neural Network (MLPClassifier)
-* ⚖️ **SMOTE:** Handles data imbalance via oversampling.
-* 📈 **Evaluation:** ROC curves, confusion matrix, classification reports.
-* 🧠 **Interactive CLI:** Allows real-time DS risk predictions with Bayesian and ML estimates.
+*  **SMOTE:** Handles data imbalance via oversampling.
+*  **Evaluation:** ROC curves, confusion matrix, classification reports.
+*  **Interactive CLI:** Allows real-time DS risk predictions with Bayesian and ML estimates.
 
----
 
-## 📂 Dataset
+
+ Dataset
 
 The model expects a dataset (in `.xlsx` format) with the following relevant columns:
 
@@ -37,9 +33,7 @@ The model expects a dataset (in `.xlsx` format) with the following relevant colu
 | `snp_abnormal`           | SNP abnormality detected (0/1)                  |
 | `diagnosis` or `ds_risk` | Target variable: DS diagnosis (0 = No, 1 = Yes) |
 
----
-
-## 🛠️ Requirements
+🛠 Requirements
 
 Install dependencies using:
 
@@ -47,7 +41,7 @@ Install dependencies using:
 pip install -r requirements.txt
 ```
 
-**Required libraries:**
+Required libraries:
 
 * pandas
 * numpy
@@ -57,9 +51,9 @@ pip install -r requirements.txt
 * imbalanced-learn
 * openpyxl
 
----
 
-## 🚀 Running the Project
+
+ Running the Project
 
 1. Place your dataset at:
 
@@ -93,16 +87,16 @@ SNP Abnormality Detected (0/1): 1
 
 ---
 
-## 📈 Model Performance
+ Model Performance
 
-* **Logistic Regression & MLPClassifier**
+* Logistic Regression & MLPClassifier**
 
   * Evaluated using confusion matrix, ROC curve, AUC
   * Handles class imbalance using SMOTE
 
----
 
-## 🧠 Bayesian Logic
+
+ Bayesian Logic
 
 The Bayesian risk is calculated by adjusting **prior odds** using **likelihood ratios** based on clinical literature and age groups.
 
@@ -115,9 +109,9 @@ The Bayesian risk is calculated by adjusting **prior odds** using **likelihood r
 
 Total posterior risk combines maternal/paternal age, carrier and karyotype status, and SNP results.
 
----
 
-## 🧪 Example Output
+
+ Example Output
 
 ```
 [Bayesian Estimate] Risk of Down Syndrome: 32.56%
@@ -125,27 +119,7 @@ Total posterior risk combines maternal/paternal age, carrier and karyotype statu
 [Neural Net Estimate] Risk: 38.78%
 ```
 
----
 
-## 📌 TODO
 
-* [ ] Add GUI interface (Tkinter/Streamlit)
-* [ ] Export model for deployment
-* [ ] Validate on clinical-grade data
 
----
 
-## 📄 License
-
-This project is for educational and research purposes only. No medical advice is implied or provided.
-
----
-
-## 🙌 Acknowledgements
-
-* Inspired by real-world clinical genetics screening processes.
-* Risk tables derived from published medical literature and public health data.
-
----
-
-Let me know if you’d like to include screenshots, Streamlit support, or deploy it to the web (e.g., using Flask or Gradio).
